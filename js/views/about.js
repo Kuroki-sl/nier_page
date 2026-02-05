@@ -40,7 +40,57 @@ export default `
 
             <div id="tools" class="content-panel">
                 <div class="status-header">Módulos Instalados</div>
-                <p>Lista de lenguajes y tecnologías.</p>
+                
+                <!-- Languages -->
+                <div class="skill-box">
+                    <span class="skill-title">Lenguajes</span>
+                    <i class="devicon-c-plain skill-icon" title="C"></i>
+                    <i class="devicon-cplusplus-plain skill-icon" title="C++"></i>
+                    <i class="devicon-csharp-plain skill-icon" title="C#"></i>
+                    <i class="devicon-python-plain skill-icon" title="Python"></i>
+                    <i class="devicon-javascript-plain skill-icon" title="JavaScript"></i>
+                    <i class="devicon-mysql-plain skill-icon" title="SQL"></i>
+                </div>
+
+                <!-- Frameworks & Libs -->
+                <div class="skill-box">
+                    <span class="skill-title">Frameworks / Libs</span>
+                    <i class="devicon-nodejs-plain-wordmark skill-icon" title="Node.js"></i>
+                    <i class="devicon-pandas-plain skill-icon" title="Pandas"></i>
+                    <i class="devicon-numpy-plain skill-icon" title="Numpy"></i>
+                    <i class="devicon-express-original skill-icon" title="Express"></i>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-box">
+                    <span class="skill-title">Bases de Datos</span>
+                    <i class="devicon-mysql-plain-wordmark skill-icon" title="MySQL"></i>
+                    <i class="devicon-mongodb-plain-wordmark skill-icon" title="MongoDB"></i>
+                    <i class="devicon-sqlite-plain skill-icon" title="SQLite"></i>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-box">
+                    <span class="skill-title">Herramientas</span>
+                    <i class="devicon-git-plain skill-icon" title="Git"></i>
+                    <i class="devicon-vscode-plain skill-icon" title="VS Code"></i>
+                    <i class="devicon-jupyter-plain skill-icon" title="Jupyter"></i>
+                    <div class="skill-icon" title="Antigravity" style="display: flex; align-items: center; justify-content: center;">
+                        <div style="
+                            width: 1em; 
+                            height: 1em; 
+                            background-color: currentColor; 
+                            -webkit-mask-image: url(antigravity.png); 
+                            mask-image: url(antigravity.png); 
+                            -webkit-mask-size: contain; 
+                            mask-size: contain; 
+                            -webkit-mask-repeat: no-repeat; 
+                            mask-repeat: no-repeat;
+                            -webkit-mask-position: center; 
+                            mask-position: center;">
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="apps" class="content-panel">

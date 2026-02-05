@@ -332,3 +332,105 @@ body::after {
 ::-webkit-scrollbar-thumb {
     background: var(--text-color);
 }
+
+/* --- SKILL BOX SITES --- */
+.skill-box {
+    border: 1px solid var(--text-color);
+    position: relative;
+    margin-top: 25px;
+    /* Espacio para el título */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    transition: all 0.3s ease;
+}
+
+.skill-box:hover {
+    background: rgba(75, 75, 75, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-title {
+    position: absolute;
+    top: -14px;
+    left: 15px;
+    background: var(--bg-color);
+    /* Finge cortar el borde usando el color de fondo */
+    padding: 0 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-size: 0.9em;
+}
+
+.skill-icon {
+    font-size: 3rem;
+    color: var(--text-color);
+    transition: all 0.2s;
+    position: relative;
+}
+
+/* Efecto hover en iconos individualmente */
+.skill-icon:hover {
+    transform: scale(1.2);
+    color: var(--accent-color);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Tooltip simple para nombre al hover */
+.skill-icon::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.3em;
+    opacity: 0;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 2px 5px;
+    pointer-events: none;
+}
+
+.skill-icon:hover::after {
+    opacity: 1;
+}
+
+/* --- PROJECT LIST ITEMS --- */
+.project-item {
+    border: 1px dashed var(--border-color);
+    padding: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.project-item h3,
+.project-item p {
+    pointer-events: none;
+    /* Evita parpadeo si el ratón toca el texto */
+}
+
+/* Efecto hover estilo NieR (Inversión) */
+.project-item:hover,
+.project-item.active-project {
+    background-color: rgba(75, 75, 75, 0.1);
+    /* Sutil al inicio */
+}
+
+.project-item:hover {
+    border-style: solid;
+    /* Cambio sutil de borde */
+    background-color: rgba(75, 75, 75, 0.2);
+}
+
+/* Estado seleccionado activo (opcional si queremos persistencia) */
+.project-item.active-project {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border-style: solid;
+}
