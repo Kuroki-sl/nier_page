@@ -100,7 +100,9 @@ export default `
 
             <div id="workspace" class="content-panel">
                 <div class="status-header">Entorno Físico</div>
-                <p>Descripción y foto del setup.</p>
+                <p>Procesador : Ryzen 5 7500f 3,7GHz.</p>
+                <p>Tarjeta Gráfica : RX 7600 8GB.</p>
+                <p>Memoria RAM : 32GB DDR5 5200MHz.</p>
             </div>
         </div>
     </main>
