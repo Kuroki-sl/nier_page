@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SISTEMA YoRHa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="ui-container">
+        <header class="top-nav-bar">
+            <a href="/" class="nav-link active">INICIO</a>
+            <a href="/about" class="nav-link">DATOS UNIDAD</a>
+            <a href="/projects" class="nav-link">PROYECTOS</a>
+            <a href="/games" class="nav-link">ARCHIVOS</a>
+            <a href="/music" class="nav-link">SONIDO</a>
+            <a href="/contact" class="nav-link">CONTACTO</a>
+        </header>
+
+        <div id="app-view">
+        </div>
+
+        <script type="module" src="js/router.js"></script>
+
+        <footer class="bottom-bar">
+            <div class="context-help">
+                Navegar por el menú principal.
+            </div>
+            <div class="button-prompts">
+                <div class="prompt">
+                    <span class="key-icon">W</span><span class="key-icon">S</span> Seleccionar
+                </div>
+                <div class="prompt">
+                    <span class="key-icon">Enter</span> Confirmar
+                </div>
+                <div class="prompt">
+                    <span class="key-icon">Esc</span> Atrás
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
