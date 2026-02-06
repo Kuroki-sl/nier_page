@@ -16,48 +16,62 @@ async function loadView(viewName) {
 
     try {
         const module = await import(`./views/${viewName}.js`);
-        viewCache[viewName] = module.default;
-        return module.default;
+        // Soporte para ambos formatos: string simple (legacy) o objeto { html, init } (nuevo)
+        const viewData = typeof module.default === 'string'
+            ? { html: module.default, init: null }
+            : module.default;
+
+        viewCache[viewName] = viewData;
+        return viewData;
     } catch (e) {
         console.error(`Error cargando vista ${viewName}:`, e);
-        return `<div class="error-panel">ERROR: DATOS CORRUPTOS [Vista no encontrada]</div>`;
+        return {
+            html: `<div class="error-panel">ERROR: DATOS CORRUPTOS [Vista no encontrada]</div>`,
+            init: null
+        };
     }
 }
 
 async function navigate(path) {
-    //Manejo de ruta
-    const route = path === '/' ? '/' : path.replace(/\/$/, ""); //Normalizar
+    const route = path === '/' ? '/' : path.replace(/\/$/, "");
     const viewName = routes[route] || '404';
 
-    //Actualizar URL
     window.history.pushState({}, "", path);
-
-    //Renderizar Vista
     await render(viewName);
-
-    //Actualizar Navegacion Activa
     updateActiveLink(path);
 }
+
+// Variable para almacenar la función de limpieza de la vista actual
+let currentCleanup = null;
 
 async function render(viewName) {
     const appView = document.getElementById('app-view');
 
-    //Efecto de transicion
     appView.style.opacity = '0';
     appView.style.transform = 'translateX(-10px)';
 
-    const content = await loadView(viewName);
+    // Ejecutar limpieza de la vista anterior si existe
+    if (currentCleanup && typeof currentCleanup === 'function') {
+        currentCleanup();
+        currentCleanup = null;
+    }
+
+    const view = await loadView(viewName);
 
     setTimeout(() => {
-        appView.innerHTML = content;
+        appView.innerHTML = view.html;
 
-        if (window.initViewScripts) window.initViewScripts(viewName);
+        // Inicializar lógica de la nueva vista
+        if (view.init && typeof view.init === 'function') {
+            currentCleanup = view.init();
+        } else if (window.initViewScripts) {
+            // Fallback para lógica global antigua
+            window.initViewScripts(viewName);
+        }
 
-        //Efecto de entrada
         appView.style.opacity = '1';
         appView.style.transform = 'translateX(0)';
 
-        //Reproducir sonido de cambio de UI
         if (window.playUiSound) window.playUiSound('move');
 
     }, 200);

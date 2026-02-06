@@ -434,3 +434,155 @@ body::after {
     color: var(--bg-color);
     border-style: solid;
 }
+
+/* --- GAMES VIEW REFACTOR --- */
+
+.game-wrapper {
+    gap: 20px;
+}
+
+.game-categories-panel {
+    flex: 0.5;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.game-list-panel {
+    flex: 1.2;
+    padding: 0;
+}
+
+.game-details-panel {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+
+.transparent-header {
+    background: rgba(0, 0, 0, 0.5);
+    color: #d1d1bc;
+    border: none;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+}
+
+.inverse-header {
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 5px 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.details-header {
+    color: var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+}
+
+.game-preview-container {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.preview-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.game-description-area {
+    flex: 1;
+    margin-top: 10px;
+}
+
+.game-list {
+    overflow-y: auto;
+    max-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.game-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    background: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.game-item:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.game-icon-container {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.game-name {
+    font-size: 1.4em;
+    color: var(--text-color);
+}
+
+.empty-state {
+    padding: 20px;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.placeholder-text {
+    opacity: 0.5;
+    color: var(--text-color);
+}
+
+/* --- NEW UI TWEAKS --- */
+.content-panel-transparent {
+    background: rgba(209, 209, 188, 0.6);
+    /* Same base color but transparent, matching status-panel style if preferred, OR user asked for the transparent one */
+    /* User said: "ese color transparente que tiene actualmente de fondo CATEGORÍAS" -> which was rgba(0,0,0,0.5) */
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Reset margin for headers inside these panels to fit flush if needed */
+.content-panel-transparent .status-header {
+    margin-bottom: 0;
+}
+
+.content-panel-transparent .game-categories {
+    padding: 10px;
+}
+
+.content-panel-transparent .game-description-area {
+    padding: 15px;
+}
+
+.content-panel-transparent .game-preview-container {
+    margin: 15px;
+    width: calc(100% - 30px);
+}

@@ -1,26 +1,26 @@
-export default `
+const html = `
 <div class="content-wrapper">
     <main class="main-panel" style="display: flex; gap: 20px;">
         <div style="flex: 1;">
             <h1 class="section-title">DATOS</h1>
             <ul class="vertical-menu">
                 <li class="menu-item">
-                    <button class="menu-btn active-sub" onclick="showPanel('presentation', this)">
+                    <button class="menu-btn active-sub" data-target="presentation">
                         Presentación
                     </button>
                 </li>
                 <li class="menu-item">
-                    <button class="menu-btn" onclick="showPanel('tools', this)">
+                    <button class="menu-btn" data-target="tools">
                         Herramientas
                     </button>
                 </li>
                 <li class="menu-item">
-                    <button class="menu-btn" onclick="showPanel('apps', this)">
+                    <button class="menu-btn" data-target="apps">
                         Aplicaciones
                     </button>
                 </li>
                 <li class="menu-item">
-                    <button class="menu-btn" onclick="showPanel('workspace', this)">
+                    <button class="menu-btn" data-target="workspace">
                         Espacio de Trabajo
                     </button>
                 </li>
@@ -120,3 +120,34 @@ export default `
     </aside>
 </div>
 `;
+
+function init() {
+    const buttons = document.querySelectorAll('.menu-btn');
+    const panels = document.querySelectorAll('.content-panel');
+
+    function showPanel(e) {
+        const btn = e.currentTarget;
+        const targetId = btn.getAttribute('data-target');
+
+        // Reset UI
+        panels.forEach(p => p.classList.remove('active-panel'));
+        buttons.forEach(b => b.classList.remove('active-sub'));
+
+        // Activate
+        const targetPanel = document.getElementById(targetId);
+        if (targetPanel) {
+            targetPanel.classList.add('active-panel');
+        }
+        btn.classList.add('active-sub');
+    }
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', showPanel);
+    });
+
+    return () => {
+        buttons.forEach(btn => btn.removeEventListener('click', showPanel));
+    };
+}
+
+export default { html, init };
