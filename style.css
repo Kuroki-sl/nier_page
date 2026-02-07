@@ -579,7 +579,9 @@ body::after {
 }
 
 .content-panel-transparent .game-description-area {
-    padding: 15px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .content-panel-transparent .game-preview-container {
