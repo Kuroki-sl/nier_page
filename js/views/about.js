@@ -44,38 +44,38 @@ const html = `
                 <!-- Languages -->
                 <div class="skill-box">
                     <span class="skill-title">Lenguajes</span>
-                    <i class="devicon-c-plain skill-icon" title="C"></i>
-                    <i class="devicon-cplusplus-plain skill-icon" title="C++"></i>
-                    <i class="devicon-csharp-plain skill-icon" title="C#"></i>
-                    <i class="devicon-python-plain skill-icon" title="Python"></i>
-                    <i class="devicon-javascript-plain skill-icon" title="JavaScript"></i>
-                    <i class="devicon-mysql-plain skill-icon" title="SQL"></i>
+                    <i class="devicon-c-plain skill-icon" data-title="C"></i>
+                    <i class="devicon-cplusplus-plain skill-icon" data-title="C++"></i>
+                    <i class="devicon-csharp-plain skill-icon" data-title="C#"></i>
+                    <i class="devicon-python-plain skill-icon" data-title="Python"></i>
+                    <i class="devicon-javascript-plain skill-icon" data-title="JavaScript"></i>
+                    <i class="devicon-mysql-plain skill-icon" data-title="SQL"></i>
                 </div>
 
                 <!-- Frameworks & Libs -->
                 <div class="skill-box">
                     <span class="skill-title">Frameworks / Libs</span>
-                    <i class="devicon-nodejs-plain-wordmark skill-icon" title="Node.js"></i>
-                    <i class="devicon-pandas-plain skill-icon" title="Pandas"></i>
-                    <i class="devicon-numpy-plain skill-icon" title="Numpy"></i>
-                    <i class="devicon-express-original skill-icon" title="Express"></i>
+                    <i class="devicon-nodejs-plain-wordmark skill-icon" data-title="Node.js"></i>
+                    <i class="devicon-pandas-plain skill-icon" data-title="Pandas"></i>
+                    <i class="devicon-numpy-plain skill-icon" data-title="Numpy"></i>
+                    <i class="devicon-express-original skill-icon" data-title="Express"></i>
                 </div>
 
                 <!-- Databases -->
                 <div class="skill-box">
                     <span class="skill-title">Bases de Datos</span>
-                    <i class="devicon-mysql-plain-wordmark skill-icon" title="MySQL"></i>
-                    <i class="devicon-mongodb-plain-wordmark skill-icon" title="MongoDB"></i>
-                    <i class="devicon-sqlite-plain skill-icon" title="SQLite"></i>
+                    <i class="devicon-mysql-plain-wordmark skill-icon" data-title="MySQL"></i>
+                    <i class="devicon-mongodb-plain-wordmark skill-icon" data-title="MongoDB"></i>
+                    <i class="devicon-sqlite-plain skill-icon" data-title="SQLite"></i>
                 </div>
 
                 <!-- Tools -->
                 <div class="skill-box">
                     <span class="skill-title">Herramientas</span>
-                    <i class="devicon-git-plain skill-icon" title="Git"></i>
-                    <i class="devicon-vscode-plain skill-icon" title="VS Code"></i>
-                    <i class="devicon-jupyter-plain skill-icon" title="Jupyter"></i>
-                    <div class="skill-icon" title="Antigravity" style="display: flex; align-items: center; justify-content: center;">
+                    <i class="devicon-git-plain skill-icon" data-title="Git"></i>
+                    <i class="devicon-vscode-plain skill-icon" data-title="VS Code"></i>
+                    <i class="devicon-jupyter-plain skill-icon" data-title="Jupyter"></i>
+                    <div class="skill-icon" data-title="Antigravity" style="display: flex; align-items: center; justify-content: center;">
                         <div style="
                             width: 1em; 
                             height: 1em; 

@@ -25,7 +25,7 @@ const html = `
     <!-- Panel 3: Detalles -->
     <aside class="game-details-panel content-panel-transparent">
         <!-- Imagen -->
-        <div id="game-preview-image" class="game-preview-container">
+        <div id="game-preview-image" class="game-preview-container crt-effect">
             <span class="placeholder-text">[ VISTA PREVIA ]</span>
         </div>
 

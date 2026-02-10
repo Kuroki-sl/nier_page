@@ -2,7 +2,7 @@
 
 :root {
     --bg-color: #d1d1bc;
-    --text-color: #4b4b4b;
+    --text-color: #363636;
     --accent-color: #cd664d;
     --border-color: #8e8e8e;
     --font-stack: 'Rajdhani', sans-serif;
@@ -381,7 +381,7 @@ body::after {
 
 /* Tooltip simple para nombre al hover */
 .skill-icon::after {
-    content: attr(title);
+    content: attr(data-title);
     position: absolute;
     bottom: -25px;
     left: 50%;
@@ -390,8 +390,8 @@ body::after {
     opacity: 0;
     transition: opacity 0.2s;
     white-space: nowrap;
-    background: var(--text-color);
-    color: var(--bg-color);
+    background: color-mix(in srgb, var(--bg-color), transparent 40%);
+    color: var(--text-color);
     padding: 2px 5px;
     pointer-events: none;
 }
@@ -587,4 +587,124 @@ body::after {
 .content-panel-transparent .game-preview-container {
     margin: 15px;
     width: calc(100% - 30px);
+}
+
+/* --- CRT EFFECT --- */
+@keyframes crt-flicker {
+    0% {
+        opacity: 0.95;
+    }
+
+    5% {
+        opacity: 0.85;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    15% {
+        opacity: 0.85;
+    }
+
+    20% {
+        opacity: 0.95;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+
+    80% {
+        opacity: 0.85;
+    }
+
+    100% {
+        opacity: 0.95;
+    }
+}
+
+@keyframes scanline-scroll {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 100vh;
+        /* Move down entire height */
+    }
+}
+
+@keyframes crt-jitter {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    10% {
+        transform: translate(-0.5px, 0);
+    }
+
+    20% {
+        transform: translate(0.5px, 0);
+    }
+
+    30% {
+        transform: translate(0, 0.5px);
+    }
+
+    40% {
+        transform: translate(0, -0.5px);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.crt-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Scanlines (Scrolling Mesh) */
+.crt-effect::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* Horizontal lines + Vertical lines */
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 4px, 6px 100%;
+    pointer-events: none;
+    animation: scanline-scroll 130s linear infinite;
+}
+
+/* Flicker Overlay Only */
+.crt-effect::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    animation: crt-flicker 0.15s infinite;
+}
+
+/* Contrast boost for image inside + Jitter */
+.crt-effect img {
+    filter: contrast(1.1) brightness(1.2) saturate(1.1);
+    animation: crt-jitter 8s infinite;
 }
