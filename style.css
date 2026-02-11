@@ -333,12 +333,10 @@ body::after {
     background: var(--text-color);
 }
 
-/* --- SKILL BOX SITES --- */
 .skill-box {
     border: 1px solid var(--text-color);
     position: relative;
     margin-top: 25px;
-    /* Espacio para el título */
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -357,7 +355,6 @@ body::after {
     top: -14px;
     left: 15px;
     background: var(--bg-color);
-    /* Finge cortar el borde usando el color de fondo */
     padding: 0 10px;
     font-weight: 700;
     text-transform: uppercase;
@@ -372,14 +369,12 @@ body::after {
     position: relative;
 }
 
-/* Efecto hover en iconos individualmente */
 .skill-icon:hover {
     transform: scale(1.2);
     color: var(--accent-color);
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
-/* Tooltip simple para nombre al hover */
 .skill-icon::after {
     content: attr(data-title);
     position: absolute;
@@ -400,7 +395,6 @@ body::after {
     opacity: 1;
 }
 
-/* --- PROJECT LIST ITEMS --- */
 .project-item {
     border: 1px dashed var(--border-color);
     padding: 15px;
@@ -412,30 +406,23 @@ body::after {
 .project-item h3,
 .project-item p {
     pointer-events: none;
-    /* Evita parpadeo si el ratón toca el texto */
 }
 
-/* Efecto hover estilo NieR (Inversión) */
 .project-item:hover,
 .project-item.active-project {
     background-color: rgba(75, 75, 75, 0.1);
-    /* Sutil al inicio */
 }
 
 .project-item:hover {
     border-style: solid;
-    /* Cambio sutil de borde */
     background-color: rgba(75, 75, 75, 0.2);
 }
 
-/* Estado seleccionado activo (opcional si queremos persistencia) */
 .project-item.active-project {
     background-color: var(--text-color);
     color: var(--bg-color);
     border-style: solid;
 }
-
-/* --- GAMES VIEW REFACTOR --- */
 
 .game-wrapper {
     gap: 20px;
@@ -558,18 +545,14 @@ body::after {
     color: var(--text-color);
 }
 
-/* --- NEW UI TWEAKS --- */
 .content-panel-transparent {
     background: rgba(209, 209, 188, 0.6);
-    /* Same base color but transparent, matching status-panel style if preferred, OR user asked for the transparent one */
-    /* User said: "ese color transparente que tiene actualmente de fondo CATEGORÍAS" -> which was rgba(0,0,0,0.5) */
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
 }
 
-/* Reset margin for headers inside these panels to fit flush if needed */
 .content-panel-transparent .status-header {
     margin-bottom: 0;
 }
@@ -589,7 +572,6 @@ body::after {
     width: calc(100% - 30px);
 }
 
-/* --- CRT EFFECT --- */
 @keyframes crt-flicker {
     0% {
         opacity: 0.95;
@@ -631,7 +613,6 @@ body::after {
 
     100% {
         background-position: 0 100vh;
-        /* Move down entire height */
     }
 }
 
@@ -670,7 +651,6 @@ body::after {
     overflow: hidden;
 }
 
-/* Scanlines (Scrolling Mesh) */
 .crt-effect::before {
     content: " ";
     display: block;
@@ -679,7 +659,6 @@ body::after {
     left: 0;
     bottom: 0;
     right: 0;
-    /* Horizontal lines + Vertical lines */
     background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
     z-index: 2;
     background-size: 100% 4px, 6px 100%;
@@ -687,7 +666,6 @@ body::after {
     animation: scanline-scroll 130s linear infinite;
 }
 
-/* Flicker Overlay Only */
 .crt-effect::after {
     content: " ";
     display: block;
@@ -703,11 +681,11 @@ body::after {
     animation: crt-flicker 0.15s infinite;
 }
 
-/* Contrast boost for image inside + Jitter */
 .crt-effect img {
     filter: contrast(1.1) brightness(1.2) saturate(1.1);
     animation: crt-jitter 8s infinite;
-}/* --- MUSIC VIEW STYLES --- */
+}
+
 .music-list {
     display: flex;
     flex-direction: column;
@@ -715,7 +693,6 @@ body::after {
 
 .music-item {
     position: relative;
-    /* Para el overlay del link */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -727,13 +704,11 @@ body::after {
 .music-item:hover {
     background-color: rgba(75, 75, 75, 0.1);
     padding-left: 20px;
-    /* Efecto de desplazamiento */
 }
 
 .music-item:hover::before {
     content: '▶';
     margin-right: -15px;
-    /* Compensar padding */
     position: absolute;
     left: 5px;
     font-size: 0.8em;
@@ -772,7 +747,6 @@ body::after {
     z-index: 10;
 }
 
-/* Music Visualizer Animation */
 .music-visualizer-container {
     display: flex;
     justify-content: space-between;
@@ -804,12 +778,11 @@ body::after {
         height: 10%;
     }
 }
-/* --- RESPONSIVE VIDEO PLAYER --- */
+
 .player-wrapper {
     position: relative;
     width: 100%;
     padding-bottom: 56.25%;
-    /* 16:9 Aspect Ratio */
     height: 0;
     border: 1px solid var(--border-color);
     background: #000;
