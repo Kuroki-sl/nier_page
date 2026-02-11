@@ -19,7 +19,7 @@ body {
     font-family: var(--font-stack);
     font-size: 20px;
     background-color: var(--bg-color);
-    background-image: url('image_0.png');
+    background-image: url('image_0.webp');
     background-size: cover;
     background-position: center;
     color: var(--text-color);

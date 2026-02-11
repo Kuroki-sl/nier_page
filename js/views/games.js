@@ -46,7 +46,7 @@ function init() {
         // Actualizar imagen grande
         const container = document.getElementById('game-preview-image');
         if (container) {
-            const capturePath = `assets/games/${id}_capture.png`;
+            const capturePath = `assets/games/${id}_capture.webp`;
             // Usamos una imagen con onerror manejado inline por simplicidad en el HTML inyectado, 
             // aunque idealmente usaríamos un handler también.
             container.innerHTML = `
@@ -72,7 +72,7 @@ function init() {
 
         let htmlContent = '';
         games.forEach(game => {
-            const iconPath = `assets/games/${game.id}_icon.png`;
+            const iconPath = `assets/games/${game.id}_icon.webp`;
             // SVG fallback en base64 para evitar peticiones externas si falla
             const fallbackIcon = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzQ0NCIgZD0iTTEyIDJMMiAxMmwxMCAxMCAxMC0xMEwxMiAyeiIvPjwvc3ZnPg==';
 

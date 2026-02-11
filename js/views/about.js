@@ -80,8 +80,8 @@ const html = `
                             width: 1em; 
                             height: 1em; 
                             background-color: currentColor; 
-                            -webkit-mask-image: url(antigravity.png); 
-                            mask-image: url(antigravity.png); 
+                            -webkit-mask-image: url(antigravity.webp); 
+                            mask-image: url(antigravity.webp); 
                             -webkit-mask-size: contain; 
                             mask-size: contain; 
                             -webkit-mask-repeat: no-repeat; 
