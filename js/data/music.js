@@ -52,5 +52,14 @@ export const musicDB = [
         youtubeId: 'rXnOplNyWIs',
         type: 'song',
         desc: 'Cancion fanMade de vocaloid'
+    },
+    {
+        id: 'itsover',
+        title: 'It s Over, Isnt It?',
+        artist: 'Rebecca Sugar',
+        url: 'https://youtu.be/Ussqi3nagrQ?si=rwGc085a9kMkU654',
+        youtubeId: 'Ussqi3nagrQ',
+        type: 'song',
+        desc: 'Cancion interpretada por Perla de SU'
     }
 ];
