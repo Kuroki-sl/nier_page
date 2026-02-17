@@ -61,5 +61,14 @@ export const musicDB = [
         youtubeId: 'Ussqi3nagrQ',
         type: 'song',
         desc: 'Cancion interpretada por Perla de SU'
+    },
+    {
+        id: 'doitforher',
+        title: 'Do It For Her',
+        artist: 'Rebecca Sugar',
+        url: 'https://youtu.be/4yG8caPPY1Y?si=4i1AL3MiYN6iGZ7T',
+        youtubeId: '4yG8caPPY1Y',
+        type: 'song',
+        desc: 'Cancion interpretada por Perla de SU'
     }
 ];
