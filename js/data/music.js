@@ -9,6 +9,15 @@ export const musicDB = [
         desc: 'Lista de reproducción completa del Epic The Musical.'
     },
     {
+        id: 'Aurora',
+        title: 'Fav Aurora Songs',
+        artist: 'Aurora',
+        url: 'https://www.youtube.com/watch?v=RuXa_yxZMGI&list=PLJmRqCiQrH6Y',
+        youtubeId: 'PLJmRqCiQrH6Y',
+        type: 'playlist',
+        desc: 'Canciones favoritas de la cantante Noruega Aurora.'
+    },
+    {
         id: 'weight_of_the_world',
         title: 'Weight of the World',
         artist: 'J\'Nique Nicole',

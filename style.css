@@ -796,3 +796,37 @@ body::after {
     height: 100%;
     border: none;
 }
+
+/* Contact View Styles */
+.contact-link {
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 14px 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.contact-link:hover {
+    padding-left: 22px;
+    background-color: rgba(75, 75, 75, 0.15);
+}
+
+.contact-prefix {
+    margin-right: 10px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.contact-name {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.contact-desc {
+    margin-left: auto;
+    font-size: 0.85em;
+    opacity: 0.6;
+    font-family: monospace;
+}
+

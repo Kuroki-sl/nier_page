@@ -50,15 +50,18 @@ const html = `
             <div id="tools" class="content-panel">
                 <div class="status-header">Módulos Instalados</div>
                 
-                <!-- Languages -->
+                <!-- Lenguajes -->
                 <div class="skill-box">
                     <span class="skill-title">Lenguajes</span>
+                    <i class="devicon-javascript-plain skill-icon" data-title="JavaScript"></i>
+                    <i class="devicon-typescript-plain skill-icon" data-title="TypeScript"></i>
+                    <i class="devicon-python-plain skill-icon" data-title="Python"></i>
                     <i class="devicon-c-plain skill-icon" data-title="C"></i>
                     <i class="devicon-cplusplus-plain skill-icon" data-title="C++"></i>
                     <i class="devicon-csharp-plain skill-icon" data-title="C#"></i>
-                    <i class="devicon-python-plain skill-icon" data-title="Python"></i>
-                    <i class="devicon-javascript-plain skill-icon" data-title="JavaScript"></i>
-                    <i class="devicon-mysql-plain skill-icon" data-title="SQL"></i>
+                    <i class="devicon-php-plain skill-icon" data-title="PHP"></i>
+                    <i class="devicon-html5-plain skill-icon" data-title="HTML5"></i>
+                    <i class="devicon-css3-plain skill-icon" data-title="CSS3"></i>
                 </div>
 
                 <!-- Frameworks & Libs -->
@@ -70,19 +73,28 @@ const html = `
                     <i class="devicon-express-original skill-icon" data-title="Express"></i>
                 </div>
 
-                <!-- Databases -->
+                <!-- Bases de Datos -->
                 <div class="skill-box">
                     <span class="skill-title">Bases de Datos</span>
+                    <i class="devicon-oracle-original skill-icon" data-title="Oracle SQL"></i>
                     <i class="devicon-mysql-plain-wordmark skill-icon" data-title="MySQL"></i>
                     <i class="devicon-mongodb-plain-wordmark skill-icon" data-title="MongoDB"></i>
                     <i class="devicon-sqlite-plain skill-icon" data-title="SQLite"></i>
                 </div>
 
-                <!-- Tools -->
+                <!-- Herramientas -->
                 <div class="skill-box">
                     <span class="skill-title">Herramientas</span>
                     <i class="devicon-git-plain skill-icon" data-title="Git"></i>
                     <i class="devicon-vscode-plain skill-icon" data-title="VS Code"></i>
+                    <i class="devicon-postman-plain skill-icon" data-title="Postman"></i>
+                    <div class="skill-icon" data-title="Power BI" style="display: flex; align-items: center; justify-content: center; width: 1em; height: 1em;">
+                        <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor">
+                            <rect x="3" y="12" width="4.5" height="10" rx="1.2"/>
+                            <rect x="9.75" y="7" width="4.5" height="15" rx="1.2"/>
+                            <rect x="16.5" y="2" width="4.5" height="20" rx="1.2"/>
+                        </svg>
+                    </div>
                     <i class="devicon-jupyter-plain skill-icon" data-title="Jupyter"></i>
                     <div class="skill-icon" data-title="Antigravity" style="display: flex; align-items: center; justify-content: center;">
                         <div style="
