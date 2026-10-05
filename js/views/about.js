@@ -31,8 +31,17 @@ const html = `
             <div id="presentation" class="content-panel active-panel">
                 <div class="status-header">Presentación</div>
                 <p>
-                    Hola, no se que poner aqui :p
+                    Mi formación en Ingeniería Civil Informática me ha dado las herramientas para entender y construir el motor de las aplicaciones. Hoy, cursando mi penúltimo semestre, busco llevar esa base técnica desde los entornos locales universitarios hacia el mundo laboral real.
                 </p>
+                <br>
+                <p>
+                    He centrado mi aprendizaje en dominar el ecosistema backend. Mi experiencia abarca desde la programación con lenguajes como Python, C++ y C#, hasta la estructuración de bases de datos relacionales mediante Oracle SQL. Le doy el valor que merece al ciclo de vida del software, asegurando que cada proyecto no solo funcione de manera robusta, sino que esté respaldado por una evaluación técnica exhaustiva y buenas prácticas de desarrollo.
+                </p>
+                <br>
+                <p>
+                    Actualmente, estoy buscando realizar mi práctica profesional entre los meses de diciembre y marzo. Busco sumarme a un área de desarrollo de software que me imponga nuevos desafíos, permitiéndome sumar valor al equipo técnico mientras potencio mis habilidades en el mundo laboral.
+                </p>
+                <br>
                 <p>
                     Me gusta Nier Automata y Epic The Musical.
                 </p>
